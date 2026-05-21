@@ -4,17 +4,39 @@
 	<title>French board game</title>
 	<style>
 		.card {
-			min-width: 100px;
-			min-height: 50px;
+			min-width: 200px;
+			min-height: 100px;
 			width: fit-content;
+			border: 2px solid black;
+			border-radius: 10px;
+      font-size: 25px;
 		}
+    .deck {
+      display: flex;
+    }
+    .finishedDeck {
+      display: flex;
+      flex-direction: column;
+    }
+    .finishedDeck > :not(:first-child) {
+      margin-top: -80px;
+    }
+    #finishedDecks {
+      display: flex;
+    }
 	</style>
 </head>
 <body>
 	<script>
 		
 	</script>
-	<button class="card">Loreum ipsum susy bakauiaiduadhaiudidh</button>
-	
+  <div class="deck">
+    <button class="card" data-goesWith="" data-pos="start" onclick="if (this.dataset.pos == '')" >Je</button>
+    <button class="card" data-goesWith="Je" data-pos="middle">suis</button>
+    <button class="card" data-goesWith="suis es est" data-pos="end">visit&eacute</button>
+  </div>
+	<button class="card">Pick up</button>
+  <div id="finishedDecks">
+  </div>
 </body>
 </html>
